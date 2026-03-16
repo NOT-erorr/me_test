@@ -1,0 +1,131 @@
+/* ===== Tokens ===== */
+:root {
+    --bg: #111;
+    --card: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #eee;
+    --muted: #888;
+    --accent: #6c5ce7;
+    --radius: 14px;
+}
+
+/* ===== Base ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* ===== Profile Card — giữa trang ===== */
+.profile-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 48px 40px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ===== Avatar ===== */
+#avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    margin-bottom: 20px;
+}
+
+/* ===== Tên ===== */
+#full-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.tagline {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* ===== Info row ===== */
+.info-row {
+    text-align: left;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+.info-row strong {
+    color: var(--muted);
+    margin-right: 8px;
+}
+
+/* ===== Links ===== */
+.links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.links a {
+    padding: 10px 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.links a:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ===== Sở thích ===== */
+.hobbies-section {
+    text-align: left;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+}
+
+.hobbies-section strong {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+#hobbies {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#hobbies li {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+    .profile-card { padding: 32px 20px; }
+    #avatar { width: 110px; height: 110px; }
+    #full-name { font-size: 1.3rem; }
+}
